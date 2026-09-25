@@ -1,0 +1,12 @@
+{
+  "name": "houseofedtech-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "House of EdTech Notes & AI Summarization App",
+  "scripts": {
+    "build": "cd frontend && pnpm install && pnpm build",
+    "start": "cd backend && npm start",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && pnpm dev"
+  }
+}

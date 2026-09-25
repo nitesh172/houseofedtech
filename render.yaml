@@ -1,0 +1,26 @@
+services:
+  # Backend API Service
+  - type: web
+    name: houseofedtech-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: NODE_ENV
+        value: production
+
+  # Frontend Next.js Service
+  - type: web
+    name: houseofedtech-frontend
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
