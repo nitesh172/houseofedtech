@@ -5,6 +5,8 @@ const createNoteSchema = yup.object({
   summary: yup.string().nullable().optional().default(""),
   content: yup.string().required("Content is required"),
   tags: yup.array().of(yup.string()).optional(),
+  isPinned: yup.boolean().optional(),
+  isArchived: yup.boolean().optional(),
 })
 
 const updateNoteSchema = yup.object({

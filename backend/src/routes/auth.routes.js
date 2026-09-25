@@ -7,6 +7,7 @@ const router = require("express").Router()
 router.post("/login", validateSchema(loginSchema), authController.login)
 
 router.post("/register", validateSchema(signupSchema), authController.signUp)
+router.post("/signup", validateSchema(signupSchema), authController.signUp)
 
 router.post("/logout", auth, authController.logout)
 
