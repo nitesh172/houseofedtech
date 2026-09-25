@@ -73,7 +73,7 @@ export function AuthScreen() {
   }
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-background text-foreground relative">
+    <div className="flex-1 w-full flex items-center justify-center p-4 md:p-8 bg-background text-foreground relative">
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-6 border border-border p-6 md:p-8 bg-card">
         {/* Left Column: Brand & Info */}
         <div className="md:col-span-6 flex flex-col justify-between gap-6 border-b md:border-b-0 md:border-r border-border pb-6 md:pb-0 md:pr-6">

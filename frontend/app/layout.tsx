@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { AuthProvider } from "@/context/AuthContext";
+import { Footer } from "@/components/layout/Footer";
 
 const nunitoSansHeading = Nunito_Sans({
   subsets: ["latin"],
@@ -47,8 +48,11 @@ export default function RootLayout({
         nunitoSansHeading.variable
       )}
     >
-      <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100 selection:bg-primary/30">
-        <AuthProvider>{children}</AuthProvider>
+      <body className="min-h-full flex flex-col bg-background text-foreground selection:bg-primary/30">
+        <AuthProvider>
+          <div className="flex-1 flex flex-col">{children}</div>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

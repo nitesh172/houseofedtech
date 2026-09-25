@@ -225,7 +225,7 @@ export function NotesDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
+    <div className="flex-1 bg-background text-foreground flex flex-col font-sans">
       <Navbar
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
